@@ -1,0 +1,10 @@
+tasks:
+  - name: Install and Run Flask
+    init: |
+      pip install flask flask-cors
+    command: |
+      python app.py
+ports:
+  - port: 5000
+    onOpen: open-browser
+    visibility: public
