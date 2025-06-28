@@ -22,3 +22,14 @@ class Consulta:
             'diagnostico': self.diagnostico,
             'status': self.status
         }
+    
+    def to_dict_paciente(self):
+    
+        return {
+            'id': self.id,
+            'paciente_nome': self.paciente_nome,
+            'medico_nome': self.medico_nome,
+            'data_consulta': self.data_consulta,  # Já é string, não precisa de isoformat()
+            'diagnostico': self.diagnostico,
+            'status': self.status
+        }
