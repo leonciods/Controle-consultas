@@ -3,6 +3,7 @@ from flask import Flask
 from flask_cors import CORS
 from controllers.consulta_controller import consulta_controller
 from controllers.receita_controller import receita_controller
+from controllers.atestado_controller import atestado_controller
 
 
 def create_app():
@@ -10,6 +11,7 @@ def create_app():
     CORS(app)
     app.register_blueprint(consulta_controller)
     app.register_blueprint(receita_controller)
+    app.register_blueprint(atestado_controller)
     return app
 
 if __name__ == '__main__':
